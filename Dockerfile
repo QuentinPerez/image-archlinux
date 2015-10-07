@@ -72,10 +72,6 @@ RUN systemctl enable \
 RUN pacman --noconfirm -Suy
 
 
-# Remove root password
-RUN passwd -d root
-
-
 # Cleanup
 RUN pacman-db-upgrade \
  && pacman -Rns linux-armv7 --noconfirm \
